@@ -14,6 +14,7 @@ function simplify(text) {
     text = text.replace(/…/g, '...');
     text = text.replace(/—/g, '-');
     text = text.replace(/•/g, '-');
+    text = text.replace(/`/g, '\'');
     return text;
 }
 function replaceUnallowedChars(text) {
