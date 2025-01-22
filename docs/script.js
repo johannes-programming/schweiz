@@ -15,17 +15,19 @@ function simplify(text) {
     text = text.replace(/—/g, '-');
     text = text.replace(/•/g, '-');
     text = text.replace(/`/g, '\'');
+    text = text.replace(/\r/g, '');
     return text;
 }
 function replaceUnallowedChars(text) {
     const lowerAscii = "abcdefghijklmnopqrstuvwxyz";
     const upperAscii = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const specialAscii = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+    const punctAscii = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+    const whiteAscii = " \n";
     const digits = "0123456789";
     const lowerSwiss = "äöüàéèç";
     const upperSwiss = "ÄÖÜ";
     const specialSwiss = "§°$£€"
-    const allowed = lowerAscii + upperAscii + specialAscii + digits + lowerSwiss + upperSwiss + specialSwiss;
+    const allowed = lowerAscii + upperAscii + punctAscii + whiteAscii + digits + lowerSwiss + upperSwiss + specialSwiss;
     // Create a regular expression that matches any character not in the allowed string
     const regex = new RegExp(`[^${allowed}]`, 'g');
     // Replace all such characters with an underscore
