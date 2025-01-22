@@ -1,7 +1,7 @@
 function beautify(text){
     text = simplify(text);
-    text = trimLineWhitespace(text);
     text = replaceUnallowedChars(text);
+    text = trimLineWhitespace(text);
     return text;
 }
 function simplify(text) {
