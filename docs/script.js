@@ -32,7 +32,7 @@ function trimLineWhitespace(inputString) {
         .join('\n'); // Join the lines back together
 }
 function updateLabel() {
-    const richTextbox = document.getElementById("richTextbox");
-    const label = document.getElementById("outputLabel");
-    label.textContent = replaceEszett(richTextbox.value);
+    const inText = document.getElementById("inText");
+    const outText = document.getElementById("outText");
+    outText.textContent = beautify(inText.value);
 }
