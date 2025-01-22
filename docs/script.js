@@ -2,6 +2,7 @@ function beautify(text){
     text = replaceEszett(text);
     text = replaceTabs(text);
     text = replaceQuotationMarks(text);
+    text = trimLineWhitespace(text);
     return text;
 }
 
@@ -20,6 +21,13 @@ function replaceQuotationMarks(inputString) {
     const quotationRegex = /[“”‘’„‹›«»]/g;
     // Replace them with the simple double quotation mark
     return inputString.replace(quotationRegex, '"');
+}
+function trimLineWhitespace(inputString) {
+    // Split the string into lines, trim each line, and join them back
+    return inputString
+        .split('\n') // Split into lines
+        .map(line => line.trimEnd()) // Trim only the end of each line
+        .join('\n'); // Join the lines back together
 }
 function updateLabel() {
     const richTextbox = document.getElementById("richTextbox");
