@@ -28,7 +28,7 @@ function replaceUnallowedChars(text) {
     // Create a regular expression that matches any character not in the allowed string
     const regex = new RegExp(`[^${allowed}]`, 'g');
     // Replace all such characters with an underscore
-    return text.replace(text, '_');
+    return text.replace(regex, '_');
 }
 function trimLineWhitespace(text) {
     // Split the string into lines, trim each line, and join them back
