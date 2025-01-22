@@ -9,22 +9,8 @@
     </head>
     <body>
         <h1>ESZETT</h1>
-        <textarea class="eszett" id="richTextbox" oninput="updateLabel();"></textarea>
+        <textarea class="eszett" id="richTextbox" oninput="beautify();"></textarea>
         <textarea class="eszett" id="outputLabel" readonly></textarea>
     </body>
-    <script>
-
-        function replaceEszett(text) {
-            // Use a regular expression to replace lowercase and uppercase eszett
-            return text
-                .replace(/ß/g, 'ss') // Replace lowercase ß with ss
-                .replace(/ẞ/g, 'SS'); // Replace uppercase ẞ with SS
-        }
-
-        function updateLabel() {
-            const richTextbox = document.getElementById("richTextbox");
-            const label = document.getElementById("outputLabel");
-            label.textContent = replaceEszett(richTextbox.value);
-        }
-    </script>
+    <script src="/script.js"></script>
 </html>
