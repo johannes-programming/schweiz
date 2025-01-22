@@ -1,8 +1,10 @@
 function beautify(text){
+    console.log("Original string:", JSON.stringify(text));
     text = replaceEszett(text);
     text = replaceTabs(text);
     text = replaceQuotationMarks(text);
     text = trimLineWhitespace(text);
+    console.log("Beautified string:", JSON.stringify(text));
     return text;
 }
 
