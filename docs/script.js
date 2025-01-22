@@ -26,7 +26,7 @@ function replaceUnallowedChars(text) {
     const specialSwiss = "§°$£€"
     const allowed = lowerAscii + upperAscii + specialAscii + digits + lowerSwiss + upperSwiss + specialSwiss;
     // Create a regular expression that matches any character not in the allowed string
-    const regex = new RegExp(`[^${allowedChars}]`, 'g');
+    const regex = new RegExp(`[^${allowed}]`, 'g');
     // Replace all such characters with an underscore
     return inputString.replace(text, '_');
 }
