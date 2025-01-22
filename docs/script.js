@@ -1,5 +1,6 @@
 function beautify(text){
     text = replaceEszett(text);
+    text = replaceTabs(text);
     return text;
 }
 
@@ -9,7 +10,10 @@ function replaceEszett(text) {
     text = text.replace(/ẞ/g, 'SS');
     return text;
 }
-
+function replaceTabs(inputString) {
+    // Replace all tab characters with four spaces
+    return inputString.replace(/\t/g, "    ");
+}
 function updateLabel() {
     const richTextbox = document.getElementById("richTextbox");
     const label = document.getElementById("outputLabel");
