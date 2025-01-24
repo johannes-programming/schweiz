@@ -104,7 +104,7 @@ function simplifyWithMap(text) {
         'Ŵ': 'W',
         "Χ": "X",
         "Х": "X",
-        "Υ", "Y",
+        "Υ": "Y",
         "Ỹ": "Y",
         "Ȳ": "Y",
         "У": "Y",
