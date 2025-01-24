@@ -51,6 +51,7 @@ function simplifyWithMap(text) {
         "Ẽ": "E",
         "Ë": "E",
         'Ĝ': 'G',
+        "Ğ": "G",
         "Η": "H",
         "Н": "H",
         'Ĥ': 'H',
