@@ -10,6 +10,7 @@ function simplifyWithMap(text) {
     const accentMap = {
         // lowercase
         'â': 'a',
+        'ĉ': 'c',
         'ê': 'e',
         'î': 'i',
         'µ': 'u',
