@@ -1,6 +1,5 @@
 function beautify(text){
     text = simplifyWithMap(text);
-    text = simplify(text);
     text = replaceUnallowedChars(text);
     text = trimLineWhitespace(text);
     return text;
@@ -8,16 +7,41 @@ function beautify(text){
 function simplifyWithMap(text) {
     // Define a mapping of accented characters to their non-accented equivalents
     const accentMap = {
+        // lowercase
         'â': 'a',
         'ê': 'e',
         'î': 'i',
         'ô': 'o',
+        'ß': 'ss',
+        "μ": "u",
         'û': 'u',
+
+        // uppercase
         'Â': 'A',
         'Ê': 'E',
         'Î': 'I',
         'Ô': 'O',
+        'ẞ': 'SS',
         'Û': 'U',
+
+        // punctuation
+        "“": '"',
+        "”": '"',
+        "`": "'",
+        "‘": '\'',
+        "’": '\'',
+        "„": '"',
+        "‹": '"',
+        "›": '"',
+        "«": '"',
+        "»": '"',
+        "…": "...",
+        "—": "-",
+        "•": "-",
+
+        // whitespace
+        "\t": "    ",
+        "\r": "",
     };
 
     // Process each replacement in the map using a loop
@@ -25,21 +49,6 @@ function simplifyWithMap(text) {
         text = text.replace(new RegExp(accentedChar, 'g'), plainChar);
     }
 
-    return text;
-}
-function simplify(text) {
-    const quotationRegex = /[“”‘’„‹›«»]/g;
-    text = text.replace(quotationRegex, '"');
-    text = text.replace(/ß/g, 'ss');
-    text = text.replace(/ß/g, 'ss');
-    text = text.replace(/ẞ/g, 'SS');
-    text = text.replace(/\t/g, "    ");
-    text = text.replace(/μ/g, 'u');
-    text = text.replace(/…/g, '...');
-    text = text.replace(/—/g, '-');
-    text = text.replace(/•/g, '-');
-    text = text.replace(/`/g, '\'');
-    text = text.replace(/\r/g, '');
     return text;
 }
 function replaceUnallowedChars(text) {
