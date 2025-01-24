@@ -15,6 +15,7 @@ function simplifyWithMap(text) {
         'î': 'i',
         'µ': 'u',
         'ô': 'o',
+        "ß": "ss",
         'û': 'u',
 
         // uppercase
@@ -22,13 +23,18 @@ function simplifyWithMap(text) {
         'Ê': 'E',
         'Î': 'I',
         'Ô': 'O',
+        "ẞ": "SS",
         'Û': 'U',
 
         // whitespace
+        "\r": "",
         "\t": "    ",
 
         // punctuation
         "•": "-",
+        "`": "'",
+        "…": "...",
+        "—": '-',
     };
 
     // Process each replacement in the map using a loop
@@ -41,14 +47,6 @@ function simplifyWithMap(text) {
 function simplify(text) {
     const quotationRegex = /[“”‘’„‹›«»]/g;
     text = text.replace(quotationRegex, '"');
-    text = text.replace(/ß/g, 'ss');
-    text = text.replace(/ß/g, 'ss');
-    text = text.replace(/ẞ/g, 'SS');
-    text = text.replace(/μ/g, 'u');
-    text = text.replace(/…/g, '...');
-    text = text.replace(/—/g, '-');
-    text = text.replace(/`/g, '\'');
-    text = text.replace(/\r/g, '');
     return text;
 }
 function replaceUnallowedChars(text) {
