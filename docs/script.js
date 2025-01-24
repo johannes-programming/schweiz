@@ -1,4 +1,5 @@
 function beautify(text){
+    text = simplifyWithMap(text);
     text = simplify(text);
     text = replaceUnallowedChars(text);
     text = trimLineWhitespace(text);
