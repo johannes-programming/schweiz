@@ -156,6 +156,7 @@ function simplifyWithMap(text) {
         "Ǜ": "Ü",
         "Ū": "U",
         "Ụ": "U",
+        "Ų": "U",
         'Ŵ': 'W',
         "Χ": "X",
         "Х": "X",
