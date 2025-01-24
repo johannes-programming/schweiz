@@ -15,12 +15,13 @@ function simplifyWithMap(text) {
         'ĥ': 'h',
         'î': 'i',
         'ĵ': 'j',
-        'µ': 'u',
+        "ł": "l",
         "ñ": "n",
         'ô': 'o',
         'ŝ': 's',
         "ß": "ss",
         'û': 'u',
+        'µ': 'u',
         'ŵ': 'w',
 
         // uppercase
@@ -45,6 +46,7 @@ function simplifyWithMap(text) {
         "Ï": "I",
         'Ĵ': 'J',
         "Ḷ": "L",
+        "Ł": "L",
         "Ñ": "N",
         "ᴺ": "N",
         'Ô': 'O',
