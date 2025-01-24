@@ -87,6 +87,7 @@ function simplifyWithMap(text) {
         'Ŝ': 'S',
         "Š": "S",
         "ẞ": "SS",
+        "Ş": "S",
         "Τ": "T",
         "Т": "T",
         'Û': 'U',
