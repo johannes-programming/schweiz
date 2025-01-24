@@ -90,6 +90,8 @@ function simplifyWithMap(text) {
         "›": '"',
         "«": '"',
         '»': '"',
+        "⟨": "{",
+        "⟩": "}",
     };
 
     // Process each replacement in the map using a loop
