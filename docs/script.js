@@ -22,6 +22,7 @@ function simplifyWithMap(text) {
         "ß": "ss",
         'û': 'u',
         'µ': 'u',
+        "ų": "u",
         'ŵ': 'w',
 
         // uppercase
