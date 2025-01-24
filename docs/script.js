@@ -11,6 +11,7 @@ function simplifyWithMap(text) {
         'â': 'a',
         'ê': 'e',
         'î': 'i',
+        'µ': 'u',
         'ô': 'o',
         'û': 'u',
         'Â': 'A',
