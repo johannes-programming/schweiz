@@ -16,6 +16,14 @@ function simplifyWithMap(text) {
         "μ": "u",
         'û': 'u',
 
+
+        'ĉ': 'c', // Latin Small Letter C with Circumflex
+        'ĝ': 'g', // Latin Small Letter G with Circumflex
+        'ĥ': 'h', // Latin Small Letter H with Circumflex
+        'ĵ': 'j', // Latin Small Letter J with Circumflex
+        'ŝ': 's', // Latin Small Letter S with Circumflex
+        'ŵ': 'w', // Latin Small Letter W with Circumflex
+
         // uppercase
         'Â': 'A',
         'Ê': 'E',
@@ -23,6 +31,13 @@ function simplifyWithMap(text) {
         'Ô': 'O',
         'ẞ': 'SS',
         'Û': 'U',
+
+        'Ĉ': 'C', // Latin Capital Letter C with Circumflex
+        'Ĝ': 'G', // Latin Capital Letter G with Circumflex
+        'Ĥ': 'H', // Latin Capital Letter H with Circumflex
+        'Ĵ': 'J', // Latin Capital Letter J with Circumflex
+        'Ŝ': 'S', // Latin Capital Letter S with Circumflex
+        'Ŵ': 'W'  // Latin Capital Letter W with Circumflex
 
         // punctuation
         "“": '"',
