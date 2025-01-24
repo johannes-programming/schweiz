@@ -4,9 +4,32 @@ function beautify(text){
     text = trimLineWhitespace(text);
     return text;
 }
+function simplifyWithMap(text) {
+    // Define a mapping of accented characters to their non-accented equivalents
+    const accentMap = {
+        'â': 'a',
+        'ê': 'e',
+        'î': 'i',
+        'ô': 'o',
+        'û': 'u',
+        'Â': 'A',
+        'Ê': 'E',
+        'Î': 'I',
+        'Ô': 'O',
+        'Û': 'U',
+    };
+
+    // Process each replacement in the map using a loop
+    for (const [accentedChar, plainChar] of Object.entries(accentMap)) {
+        text = text.replace(new RegExp(accentedChar, 'g'), plainChar);
+    }
+
+    return text;
+}
 function simplify(text) {
     const quotationRegex = /[“”‘’„‹›«»]/g;
     text = text.replace(quotationRegex, '"');
+    text = text.replace(/ß/g, 'ss');
     text = text.replace(/ß/g, 'ss');
     text = text.replace(/ẞ/g, 'SS');
     text = text.replace(/\t/g, "    ");
