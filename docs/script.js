@@ -1,6 +1,5 @@
 function beautify(text){
     text = simplifyWithMap(text);
-    text = simplify(text);
     text = replaceUnallowedChars(text);
     text = trimLineWhitespace(text);
     return text;
@@ -12,6 +11,7 @@ function simplifyWithMap(text) {
         'â': 'a',
         'ĉ': 'c',
         'ê': 'e',
+        'ĝ': 'g',
         'î': 'i',
         'µ': 'u',
         "ñ": "n",
@@ -37,6 +37,15 @@ function simplifyWithMap(text) {
         "`": "'",
         "…": "...",
         "—": '-',
+        '“': '"',
+        '”': '"',
+        "‘": "'",
+        "’": "'",
+        '„': '"',
+        "‹": '"',
+        "›": '"',
+        "«": '"',
+        '»': '"',
     };
 
     // Process each replacement in the map using a loop
@@ -44,11 +53,6 @@ function simplifyWithMap(text) {
         text = text.replace(new RegExp(accentedChar, 'g'), plainChar);
     }
 
-    return text;
-}
-function simplify(text) {
-    const quotationRegex = /[“”‘’„‹›«»]/g;
-    text = text.replace(quotationRegex, '"');
     return text;
 }
 function replaceUnallowedChars(text) {
