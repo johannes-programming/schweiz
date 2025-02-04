@@ -96,6 +96,8 @@ function simplifyWithMap(text) {
         "ỹ": "y",
         "ȳ": "y",
         "ɣ": "y",
+        "ÿ": "y",
+        "ý": "y",
 
         // uppercase
         "А": "A",
@@ -111,6 +113,7 @@ function simplifyWithMap(text) {
         "В": "B",
         "С": "C",
         'Ĉ': 'C',
+        "Ð": "D",
         "Е": "E",
         "Ё": "E",
         "Ε": "E",
